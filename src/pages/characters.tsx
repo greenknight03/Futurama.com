@@ -7,4 +7,4 @@ const CharacterPage: NextPage = () => {
     <CharContainer />
   )
 }
-export default CharacterPage;
+export default CharacterPage; 

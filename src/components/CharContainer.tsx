@@ -6,7 +6,7 @@ import { MEDIA_QUERY_END_POINT } from "../constants";
 
 export const CharContainer = () => {
   const name = 'characters'
-  const { data, error } = useData(name);
+  const { data, error } = useData(name); 
 
   if (error) return <Error />
   if (!data) return <Loading />

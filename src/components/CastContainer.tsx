@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Cast } from '../types/Cast';
 
 export const CastContainer = () => {
-  const name = 'cast'
+  const name = 'cast' 
   const { data, error } = useData(name);
   console.log(data);
   if (error) return <Error />

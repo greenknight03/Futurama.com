@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
       
         <main>
-         
+          <img src="https://m.media-amazon.com/images/M/MV5BYzRmMDZhNmUtNmEyNS00MmI4LTlhYTItZDRmOWY5YTU2Y2RjXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_.jpg" alt="" />
         </main>
     
     </div>
