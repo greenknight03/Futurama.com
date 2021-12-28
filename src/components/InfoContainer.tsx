@@ -15,7 +15,8 @@ export const InfoContainer = () => {
 
   return (
     <main>
-      <h2>{name}</h2>
+      {/* <h2>{name}</h2> */}
+      <Container>
         {data.map((infoData: Info) => {
           const { synopsis, yearsAired, creators, id } = infoData;
           return (
@@ -36,16 +37,34 @@ export const InfoContainer = () => {
                       <a>{creators[0].name}</a>
                     </Link>
                   </dd>
-                  <dd>
-                    <Link href={creators[0].url}>
-                      <a>{creators[0].name}</a>
-                    </Link></dd>
                 </div>
 
               </dl>
             </li>
           )
         })}
+        </Container>
     </main>
   )
 }
+
+const Container = styled.li`
+  
+  div {
+
+      dt {
+      font-size: 2rem; color:#FF6856;
+      font-style: italic;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin : 35px
+    
+      }
+
+      dd {
+          font-size: 1.5rem; 
+          letter-spacing: 0.03em;
+          /* line-height : 2-px */
+      }
+  }
+`

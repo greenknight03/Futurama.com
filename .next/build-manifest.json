@@ -30,20 +30,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/characters": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/characters.js"
-    ],
-    "/episodes": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/episodes.js"
-    ],
     "/inventory": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/inventory.js"
+    ],
+    "/questions": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/questions.js"
     ]
   },
   "ampFirstPages": []

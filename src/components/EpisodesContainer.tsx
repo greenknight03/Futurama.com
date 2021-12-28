@@ -14,29 +14,45 @@ export const EpisodesContainer = () => {
 
   return (
     <main>
-      <h2>{name}</h2>
+      {/* <h2>{name}</h2> */}
       
-        {data.map((EpisodesData: Episodes) => {
-          const { number, title, writers, originalAirDate, desc, id } = EpisodesData;
-          return (
-            <li key={`futurama-cast-${id}`}>
-              EP.{number}
-              <h3>{title}</h3>
-              <dl>
-                <div>
-                  <dt>writers:</dt>
-                  <dd>{writers}</dd>
-                </div>
-                <div>
-                  <dt>originalAirDate:</dt>
-                  <dd>{originalAirDate}</dd>
-                </div>
-              </dl>
-              <p>{desc}</p>
-            </li>
-          )
-        })}
+        <Container>
+          {data.map((EpisodesData: Episodes) => {
+            const { number, title, writers, originalAirDate, desc, id } = EpisodesData;
+            return (
+              <li key={`futurama-cast-${id}`}>
+                EP.{number}
+                <h3>{title}</h3>
+                <dl>
+                  <div>
+                    <dt>writers:</dt>
+                    <dd>{writers}</dd>
+                  </div>
+                  <div>
+                    <dt>originalAirDate:</dt>
+                    <dd>{originalAirDate}</dd>
+                  </div>
+                </dl>
+                <p>{desc}</p>
+              </li>
+            )
+          })}
+        </Container>
       
     </main>
   )
 }
+
+const Container = styled.li`
+    margin : 30px;
+    li {
+      font-weight : bold;
+      h3 {
+        color:#FF6856;
+        font-size : 2em;
+        font-style : italic;
+      }
+    
+    }
+
+`

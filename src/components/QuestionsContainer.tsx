@@ -15,35 +15,51 @@ export const QuestionsContainer = () => {
 
   return (
     <main>
-      <h2>{name}Drag to see the answer!</h2>
+      <Container>
+      <h2><i>The answer is given in advance so you don't get annoying!</i></h2>
 
-        {data.map((questionsData: Questions) => {
-          const { question, possibleAnswers, correctAnswer, id } = questionsData;
-          return (
-            <li key={`futurama-cast-${id}`}>
-              <p>
-                <span>Q</span>
-                <span>{id}. {question}</span>
-              </p>
-                {possibleAnswers.map((questionList: string, index: number) => {
-                  return (
-                    <>
-                      <li>
-                        <input type="radio" name={question} id={questionList} />
-                        <label htmlFor={questionList}><span>{index + 1}</span> {questionList}</label>
-                      </li>
-                    </>
-                  )
-                })
-                }
-          
-              <p className="answer">
-                <span>A</span>
-                <span className="drag">{correctAnswer}</span>
-              </p>
-            </li>
-          )
-        })}
+        
+          {data.map((questionsData: Questions) => {
+            const { question, possibleAnswers, correctAnswer, id } = questionsData;
+            return (
+              <li key={`futurama-cast-${id}`}>
+                <p>
+                  <span>Q</span>
+                  <span>{id}. {question}</span>
+                </p>
+                  {possibleAnswers.map((questionList: string, index: number) => {
+                    return (
+                      <>
+                        <li>
+                          <input type="radio" name={question} id={questionList} />
+                          <label htmlFor={questionList}><span>{index + 1}</span> {questionList}</label>
+                        </li>
+                      </>
+                    )
+                  })
+                  }
+            
+                <p className="answer">
+                  <span>A</span>
+                  <span className="drag">{correctAnswer}</span>
+                </p>
+              </li>
+            )
+          })}
+        </Container>
     </main >
   )
 }
+
+
+const Container = styled.li`
+  margin : 30px;
+  
+  li {
+    font-weight : bold;
+    
+  }
+h2 {
+      color:#FF6856;
+    }
+`

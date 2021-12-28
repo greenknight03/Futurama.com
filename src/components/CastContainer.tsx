@@ -14,19 +14,43 @@ export const CastContainer = () => {
 
   return (
     <main>
-      <h2>{name}</h2>
+      {/* <h2>{name}</h2> */}
     
-        {data.map((castData: Cast) => {
-          const { name, born, bio, id } = castData;
-          return (
-            <li key={`futurama-cast-${id}`}>
-              <h3>{name}</h3>
-              <p><span>Birth</span> {born}</p>
-              <Link href={bio.url}><a>More</a></Link>
-            </li>
-          )
-        })}
+        <Container>
+          {data.map((castData: Cast) => {
+            const { name, born, bio, id } = castData;
+            return (
+              <li key={`futurama-cast-${id}`}>
+                <h3>{name}</h3>
+                <p><span>Birth</span> {born}</p>
+                <Link href={bio.url}><a>More</a></Link>
+              </li>
+            )
+          })}
+        </Container>
       
     </main>
   )
 }
+
+
+const Container = styled.li`
+
+
+li{
+  text-align:center;
+  /* color:#FF6856; */
+}
+h3 {
+  color:#FF6856;
+  font-size : 2em;
+}
+  p {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight : bold;
+  }
+
+
+`
