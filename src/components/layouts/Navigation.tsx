@@ -84,14 +84,5 @@ const Header = styled.header`
     gap:0.8rem; 
     margin:1rem auto 0;
   }
-  @media (min-width: ${MEDIA_QUERY_END_POINT.TABLET}) {
-      div{
-        flex-direction:row;
-        ul{
-          grid-template-columns: repeat(6,1fr);
-          gap:0;
-          margin:0 0 0 0;
-        }
-      }
-    }
+
 `
